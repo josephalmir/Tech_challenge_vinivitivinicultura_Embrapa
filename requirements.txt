@@ -1,0 +1,7 @@
+Flask
+Flask-RESTful
+requests
+pandas
+flask-swagger-ui
+PyJWT
+boto3
