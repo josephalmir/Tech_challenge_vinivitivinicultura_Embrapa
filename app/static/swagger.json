@@ -1,0 +1,269 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API para consulta de dados de vitivinicultura da Embrapa",
+        "version": "1.0.0",
+        "title": "Vitivinicultura API"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Produção",
+            "description": "Dados de produção"
+        },
+        {
+            "name": "Processamento",
+            "description": "Dados de processamento"
+        },
+        {
+            "name": "Comercialização",
+            "description": "Dados de comercialização"
+        },
+        {
+            "name": "Importação",
+            "description": "Dados de importação"
+        },
+        {
+            "name": "Exportação",
+            "description": "Dados de exportação"
+        }
+    ],
+    "paths": {
+        "/producao": {
+            "get": {
+                "tags": ["Produção"],
+                "summary": "Obter dados de produção",
+                "description": "Retorna dados de produção em formato JSON.",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Dados de produção obtidos com sucesso",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "1970": {
+                                    "type": "string",
+                                    "example": "217208604"
+                                },
+                                "2023": {
+                                    "type": "string",
+                                    "example": "169762429"
+                                },
+                                "control": {
+                                    "type": "string",
+                                    "example": "VINHO DE MESA"
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "example": "1"
+                                },
+                                "produto": {
+                                    "type": "string",
+                                    "example": "VINHO DE MESA"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Token de autenticação ausente ou inválido"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": []
+                    }
+                ]
+            }
+        },
+        "/processamento": {
+            "get": {
+                "tags": ["Processamento"],
+                "summary": "Obter dados de processamento",
+                "description": "Retorna dados de processamento em formato JSON.",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Dados de processamento obtidos com sucesso",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "1970": {
+                                        "type": "string",
+                                        "example": "10448228"
+                                    },
+                                    "2023": {
+                                        "type": "string",
+                                        "example": "*"
+                                    },
+                                    "control": {
+                                        "type": "string",
+                                        "example": "TINTAS"
+                                    },
+                                    "cultivar": {
+                                        "type": "string",
+                                        "example": "TINTAS"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "1"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Token de autenticação ausente ou inválido"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": []
+                    }
+                ]
+            }
+        },
+        "/comercializacao": {
+            "get": {
+                "tags": ["Comercialização"],
+                "summary": "Obter dados de comercialização",
+                "description": "Retorna dados de comercialização em formato JSON.",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Dados de comercialização obtidos com sucesso",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "1970": {
+                                    "type": "string",
+                                    "example": "98327606"
+                                },
+                                "2023": {
+                                    "type": "string",
+                                    "example": "187016848"
+                                },
+                                "Produto": {
+                                    "type": "string",
+                                    "example": "VINHO DE MESA"
+                                },
+                                "control": {
+                                    "type": "string",
+                                    "example": "VINHO DE MESA"
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "example": "1"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Token de autenticação ausente ou inválido"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": []
+                    }
+                ]
+            }
+        },
+        "/importacao": {
+            "get": {
+                "tags": ["Importação"],
+                "summary": "Obter dados de importação",
+                "description": "Retorna dados de importação em formato JSON.",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Dados de importação obtidos com sucesso",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "1970": {
+                                    "type": "string",
+                                    "example": "0"
+                                },
+                                "2023": {
+                                    "type": "string",
+                                    "example": "1732850"
+                                },
+                                "Id": {
+                                    "type": "string",
+                                    "example": "1"
+                                },
+                                "País": {
+                                    "type": "string",
+                                    "example": "Africa do Sul"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Token de autenticação ausente ou inválido"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": []
+                    }
+                ]
+            }
+        },
+        "/exportacao": {
+            "get": {
+                "tags": ["Exportação"],
+                "summary": "Obter dados de exportação",
+                "description": "Retorna dados de exportação em formato JSON.",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Dados de exportação obtidos com sucesso",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "1970": {
+                                        "type": "string",
+                                        "example": "0"
+                                    },
+                                    "2023": {
+                                        "type": "string",
+                                        "example": "0"
+                                    },
+                                    "Id": {
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "País": {
+                                        "type": "string",
+                                        "example": "Afeganistão"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Token de autenticação ausente ou inválido"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key": []
+                    }
+                ]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "api_key": {
+            "type": "apiKey",
+            "name": "x-access-token",
+            "in": "header"
+        }
+    }
+}
