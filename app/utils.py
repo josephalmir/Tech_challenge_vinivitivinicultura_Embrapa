@@ -30,7 +30,3 @@ def fetch_data(url):
             data.append(row)
 
     return data
-
-# Testar a função fetch_data para identificar onde ocorre o erro
-url = 'http://vitibrasil.cnpuv.embrapa.br/download/ProcessaViniferas.csv'
-print(fetch_data(url))
